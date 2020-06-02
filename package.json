@@ -5,7 +5,8 @@
   "main": "start.js",
   "scripts": {
     "test": "jest",
-    "start": "nodemon start.js"
+    "start": "node start.js",
+    "dev": "nodemon start.js"
   },
   "repository": {
     "type": "git",
