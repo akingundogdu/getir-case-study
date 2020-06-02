@@ -1,5 +1,27 @@
+"use strict";
+
+async function responseModel(response, statusCode, message, data, isSuccess = false) {
+    return response.status(statusCode).json({
+        "code": isSuccess ? 0 : 1,
+        "msg": message,
+        "records": data
+    });
+};
+
+exports.responseModel = responseModel;
+
+/**
+ * @function ok
+ * @description It returns http response to the client with status code (200) and data
+ * @code 200
+ *
+ * @param  {HttpResponse} [response] Http Response
+ * @param  {Array} [data] Data
+ *
+ * @return HttpResponse
+ */
 exports.ok = async function (response, data) {
-    return responseModel(response, 200, "Success", data, true)
+    return responseModel(response, 200, "Success", data, true);
 }
 
 /**
@@ -14,7 +36,7 @@ exports.ok = async function (response, data) {
  * @return HttpResponse
  */
 exports.notOk = async function (response, statusCode, message) {
-    return responseModel(response, statusCode, message, [], false)
+    return responseModel(response, statusCode, message.message, [], false);
 }
 
 /**
@@ -27,8 +49,8 @@ exports.notOk = async function (response, statusCode, message) {
  * @return HttpResponse
  */
 exports.created = async function (response, data) {
-    return responseModel(response, 201, "Created successfully", data, true)
-}
+    return responseModel(response, 201, "Created successfully", data, true);
+};
 
 /**
  * @function notValidated
@@ -40,9 +62,9 @@ exports.created = async function (response, data) {
  * @return HttpResponse
  */
 exports.notValidated = async function (response, validate) {
-    const message = 'Validation Error : ' + validate[0].msg + ' for ' + validate[0].param
-    return responseModel(response, 412, message, [], false)
-}
+    const message = 'Validation Error : ' + validate[0].msg + ' for ' + validate[0].param;
+    return responseModel(response, 412, message, [], false);
+};
 
 /**
  * @function notFound
@@ -53,5 +75,5 @@ exports.notValidated = async function (response, validate) {
  * @return HttpResponse
  */
 exports.notFound = async function (response) {
-    return responseModel(response, 404, "Not found", [], false)
-}
+    return responseModel(response, 404, "Not found", [], false);
+};
