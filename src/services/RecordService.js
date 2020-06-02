@@ -1,3 +1,4 @@
+const {ErrorHandler} = require('../infrastructure/ErrorHandler')
 const RecordRepository = require('../repositories/RecordRepository');
 
 /**
@@ -12,5 +13,9 @@ const RecordRepository = require('../repositories/RecordRepository');
  * @return Record[]
  */
 exports.records = async function (query, page, limit) {
-    return RecordRepository.all(query, page, limit);
+    try {
+        return await RecordRepository.all(query, page, limit);
+    }catch (e) {
+        throw new ErrorHandler(500, e)
+    }
 }
