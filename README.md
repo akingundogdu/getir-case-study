@@ -66,7 +66,7 @@ In your root directory, run this command and see all tests are success, like bel
 $ jest
 ```
 
-![Figure 1-1](public/images/jest.png "Figure 1-1")
+![Figure 1-1](src/public/images/unit-test.png "Figure 1-1")
 
  
  ### Run Project
