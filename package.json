@@ -1,0 +1,25 @@
+{
+  "name": "getir-case-study",
+  "version": "1.0.0",
+  "description": "Code assessment project for Getir Backend software engineer",
+  "main": "start.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akingundogdu/getir-case-study.git"
+  },
+  "keywords": [
+    "getir",
+    "backend",
+    "rest",
+    "api"
+  ],
+  "author": "akingundogdu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akingundogdu/getir-case-study/issues"
+  },
+  "homepage": "https://github.com/akingundogdu/getir-case-study#readme"
+}
