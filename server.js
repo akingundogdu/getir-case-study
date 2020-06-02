@@ -22,8 +22,7 @@ let options = {
         basePath: '/',
         produces: [
             "application/json"
-        ],
-        schemes: ['http', 'https']
+        ]
     },
     basedir: __dirname,
     files: ['./src/routes/*.js']
