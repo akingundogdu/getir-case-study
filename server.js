@@ -25,8 +25,8 @@ let options = {
         ],
         schemes: ['http', 'https']
     },
-    basedir: __dirname, //app absolute path
-    files: ['./src/routes/*.js'] //Path to the API handle folder
+    basedir: __dirname,
+    files: ['./src/routes/*.js']
 };
 expressSwagger(options)
 
