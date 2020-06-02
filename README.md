@@ -77,8 +77,23 @@ $ npm run dev or node start.js (without nodemon)
 
 All done!
 
+ ### API Details
 
+You can test manually with the link below.
 
+```sh
+$ https://akin-gundogdu-getir-case-study.herokuapp.com/api/records
+```
+| Item | Description |
+| --- | --- |
+| Uri Base | `https://akin-gundogdu-getir-case-study.herokuapp.com` |
+| Route | `api/records` |
+| Http Method | `POST` |
+| Content-Type | `application/json` |
+| Accept | `application/json` |
+| Query Parameter | `limit` for pagination |
+| Query Parameter | `page` for pagination |
+| Body | `{    "startDate": "2016-01-26",    "endDate": "2018-02-02",    "minCount": 2700,    "maxCount": 3000}` |
 
 # Tech
 
