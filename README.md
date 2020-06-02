@@ -4,7 +4,7 @@
 
 This application is a technical test project for senior backend software engineer role of [Getir](https://www.getir.com). 
 
-Before start you can access backend rest api online from [Getir](https://akin-gundogdu-getir-case-study.herokuapp.com). 
+Before start you can access backend rest api online from [here](https://akin-gundogdu-getir-case-study.herokuapp.com). 
 
 # Prerequisites
 
