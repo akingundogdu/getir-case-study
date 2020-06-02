@@ -10,12 +10,6 @@ class ErrorHandler extends Error {
     }
 }
 
-const handleError = (err, res) => {
-    const {statusCode, message} = err;
-    return notOk(res, statusCode, message);
-};
-
 module.exports = {
-    ErrorHandler,
-    handleError
+    ErrorHandler
 };
